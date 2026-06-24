@@ -1,0 +1,17 @@
+# WorkBuddy 工作记忆文件
+.workbuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# 编辑器
+.vscode/
+.idea/
+*.sublime-*
+
+# 日志
+*.log
