@@ -29,6 +29,30 @@ const chapters = [
         author: '团队知识库',
         date: '2025-06-24',
         path: 'chapters/chapter_01_quickstart.html'
+    },
+    {
+        id: 'chapter_02',
+        title: '文档智能处理：让 AI 帮你写报告',
+        category: '文档处理',
+        icon: 'fas fa-file-alt',
+        iconClass: 'icon-docs',
+        categoryClass: 'category-docs',
+        desc: '掌握利用 WorkBuddy 智能处理文档的核心技巧，从报告撰写到格式转换，让 AI 成为你最得力的文档助手。',
+        author: '团队知识库',
+        date: '2025-06-24',
+        path: 'chapters/chapter_02_document.html'
+    },
+    {
+        id: 'chapter_03',
+        title: '数据分析实战：Excel 与图表自动化',
+        category: '数据分析',
+        icon: 'fas fa-chart-bar',
+        iconClass: 'icon-data',
+        categoryClass: 'category-data',
+        desc: '利用 WorkBuddy 自动化处理 Excel 数据、生成专业图表，并从中提取有价值的业务洞察。',
+        author: '团队知识库',
+        date: '2025-06-24',
+        path: 'chapters/chapter_03_data.html'
     }
 ];
 
