@@ -9,10 +9,10 @@ const chapters = [
     {
         id: 'chapter_00',
         title: 'AI应用基础知识：认识Markdown格式',
-        category: '入门指南',
+        category: '进阶知识',
         icon: 'fas fa-book-open',
-        iconClass: 'icon-tips',
-        categoryClass: 'category-tips',
+        iconClass: 'icon-advanced',
+        categoryClass: 'category-advanced',
         desc: '从零开始认识 Markdown 格式，掌握常见语法、应用场景和工具推荐，为高效使用 AI 办公打下基础。',
         author: '韩午',
         date: '2025-06-24',
@@ -21,7 +21,7 @@ const chapters = [
     {
         id: 'chapter_01',
         title: 'WorkBuddy 介绍：免费带你入门AI工具，你的第一个高智商高学历数字手下',
-        category: '办公技巧',
+        category: '入门',
         icon: 'fas fa-rocket',
         iconClass: 'icon-tips',
         categoryClass: 'category-tips',

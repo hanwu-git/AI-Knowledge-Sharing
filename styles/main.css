@@ -315,12 +315,14 @@ body {
 .category-data { background: #dcfce7; color: #166534; }
 .category-auto { background: #fef3c7; color: #92400e; }
 .category-tips { background: #fce7f3; color: #9d174d; }
+.category-advanced { background: #ede9fe; color: #5b21b6; }
 
 /* 图标颜色 */
 .icon-docs { background: linear-gradient(135deg, #3b82f6, #2563eb); }
 .icon-data { background: linear-gradient(135deg, #10b981, #059669); }
 .icon-auto { background: linear-gradient(135deg, #f59e0b, #d97706); }
 .icon-tips { background: linear-gradient(135deg, #ec4899, #db2777); }
+.icon-advanced { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
 
 /* ===== 关于区域 ===== */
 .about-section {
