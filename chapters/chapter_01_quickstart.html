@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快速上手：WorkBuddy 基础操作指南 - AI应用分享</title>
+    <title>WorkBuddy 介绍：免费带你入门AI工具，你的第一个高智商高学历数字手下 - AI应用分享</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 表格样式 */
+        .detail-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        .detail-content thead tr {
+            background: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .detail-content th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        .detail-content td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        .detail-content tbody tr:hover {
+            background: #f8fafc;
+        }
+        /* 场景引用块 */
+        .scene-quote {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+            color: #64748b;
+            font-style: italic;
+        }
+        .scene-quote strong {
+            color: #1e293b;
+            font-style: normal;
+        }
+        /* 分隔线 */
+        .section-divider {
+            margin: 32px 0;
+            border: none;
+            border-top: 1px dashed #e2e8f0;
+        }
+    </style>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -29,70 +76,450 @@
                     <i class="fas fa-arrow-left"></i> 返回目录
                 </a>
                 <span class="card-category category-tips" style="display:inline-block;margin-bottom:12px;">办公技巧</span>
-                <h1 class="detail-title">快速上手：WorkBuddy 基础操作指南</h1>
+                <h1 class="detail-title">WorkBuddy 介绍：免费带你入门AI工具，你的第一个高智商高学历数字手下</h1>
                 <div class="detail-meta">
-                    <span><i class="fas fa-user"></i> 团队知识库</span>
-                    <span><i class="fas fa-calendar"></i> 2025-06-24</span>
-                    <span><i class="fas fa-tag"></i> 入门、基础、操作指南</span>
+                    <span><i class="fas fa-user"></i> 韩午</span>
+                    <span><i class="fas fa-calendar"></i> 2026-06-25</span>
+                    <span><i class="fas fa-tag"></i> 入门、基础、介绍、下载、计费</span>
                 </div>
             </div>
         </header>
 
         <!-- 内容区 -->
         <div class="detail-body">
+            <!-- 左侧导航目录 -->
+            <nav class="toc-sidebar" id="toc-sidebar">
+                <h3>目录导航</h3>
+                <ul>
+                    <li><a href="#section-1" class="toc-level-1">一、WorkBuddy 是什么</a></li>
+                    <li><a href="#section-2" class="toc-level-1">二、从哪里下载</a></li>
+                    <li><a href="#section-2-1" class="toc-level-2">安装步骤</a></li>
+                    <li><a href="#section-2-2" class="toc-level-2">初始化登录与配置</a></li>
+                    <li><a href="#section-3" class="toc-level-1">三、实际能干什么</a></li>
+                    <li><a href="#section-3-1" class="toc-level-2">3.1 日常问答</a></li>
+                    <li><a href="#section-3-2" class="toc-level-2">3.2 文档处理</a></li>
+                    <li><a href="#section-3-3" class="toc-level-2">3.3 代码编写</a></li>
+                    <li><a href="#section-3-4" class="toc-level-2">3.4 任务自动化</a></li>
+                    <li><a href="#section-4" class="toc-level-1">四、是否收费</a></li>
+                    <li><a href="#section-4-1" class="toc-level-2">4.1 个人版</a></li>
+                    <li><a href="#section-4-2" class="toc-level-2">4.2 新用户福利</a></li>
+                    <li><a href="#section-4-3" class="toc-level-2">4.3 不同模型，不同消耗</a></li>
+                    <li><a href="#section-4-4" class="toc-level-2">4.4 获取更多免费积分</a></li>
+                    <li><a href="#section-4-5" class="toc-level-2">4.5 接入外部大模型</a></li>
+                    <li><a href="#section-4-6" class="toc-level-2">4.6 建议</a></li>
+                    <li><a href="#section-5" class="toc-level-1">五、快速上手</a></li>
+                    <li><a href="#section-5-1" class="toc-level-2">界面认知</a></li>
+                    <li><a href="#section-5-2" class="toc-level-2">进阶技巧</a></li>
+                    <li><a href="#section-6" class="toc-level-1">六、实用示例</a></li>
+                    <li><a href="#section-7" class="toc-level-1">七、常见问题</a></li>
+                </ul>
+            </nav>
+
+            <!-- 正文 -->
             <div class="detail-content">
 
                 <blockquote>
-                    从零开始了解 WorkBuddy 的核心功能和界面布局，掌握基本的文件操作、工具调用和任务管理技巧，为高效办公打下基础。
+                    从零开始认识 WorkBuddy，覆盖下载安装、账号配置、核心功能、计费模式、模型选择、进阶技巧，帮你快速上手这款 AI 桌面智能体工具。
                 </blockquote>
 
-                <h2>核心功能概览</h2>
-                <p>WorkBuddy 主要提供以下能力：</p>
+                <!-- ===== 一、WorkBuddy 是什么 ===== -->
+                <h2 id="section-1">一、WorkBuddy 是什么</h2>
+
+                <p>WorkBuddy 是腾讯推出的 AI 原生桌面智能体工作台。与传统的 AI 聊天工具不同，你只需用自然语言描述需求，它会自动思考、拆解任务、规划步骤并执行，最终交付可验证的成果。简而言之：它不是陪你聊天，而是帮你<strong>干活</strong>。</p>
+
+                <p><strong>账号体系</strong>：WorkBuddy 使用微信扫码登录，直接绑定你的微信号，无需额外注册账号、无需手机号验证。一个微信账号即是一个 WorkBuddy 账号，登录即用。</p>
+
+                <p><strong>计费方式</strong>：WorkBuddy 采用<strong>积分（Credits）制</strong>——每次使用 AI 能力会消耗一定积分，不同任务消耗的积分不同（例如简单问答消耗较少，长文档处理消耗较多）。你可以免费开始使用，积分不够时再考虑付费订阅。</p>
+
+                <p><strong>免费积分获取</strong>：</p>
+
+                <table>
+                    <thead>
+                        <tr><th>获取方式</th><th>积分数量</th><th>说明</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>首次注册</td><td><strong>2,000 Credits</strong></td><td>注册即送，一次性发放</td></tr>
+                        <tr><td>每日登录</td><td><strong>150 Credits</strong></td><td>每天登录自动领取</td></tr>
+                    </tbody>
+                </table>
+
+                <p>以上免费积分加起来，<strong>初期上手完全够用</strong>。假设你每天用 WorkBuddy 处理 2-3 个日常任务（如整理文档、分析数据、生成报告），首月累计可获得 2,000 + 150 × 30 = 6,500 Credits，基本不需要额外付费。等你真正上手了、用量上来了，再根据实际需求选择付费方案。</p>
+
+                <!-- ===== 二、从哪里下载 ===== -->
+                <h2 id="section-2">二、从哪里下载</h2>
+
+                <p><strong>官方下载地址</strong>：</p>
+                <ul>
+                    <li>国内版：<a href="https://www.codebuddy.cn/work/" target="_blank"><strong>https://www.codebuddy.cn/work/</strong></a>（推荐）</li>
+                    <li>国际版：<a href="https://workbuddy.tencent.com" target="_blank">https://workbuddy.tencent.com</a></li>
+                </ul>
+
+                <p>网站会自动识别你的操作系统（Windows / macOS），点击对应版本下载即可。</p>
+
+                <p><strong>系统要求</strong>：</p>
+                <table>
+                    <thead>
+                        <tr><th>操作系统</th><th>版本要求</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Windows</td><td>Windows 10 / 11</td></tr>
+                        <tr><td>macOS</td><td>macOS 12 及以上</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 id="section-2-1">安装步骤</h3>
+
+                <h4>Windows 安装（重要）</h4>
+                <p>安装包约 150-180MB，双击运行后按提示操作即可。需要注意以下几点：</p>
                 <ol>
-                    <li><strong>文件处理</strong> - 自动读取、编辑和生成各类文档</li>
-                    <li><strong>代码编写</strong> - 辅助开发、调试和优化代码</li>
-                    <li><strong>数据分析</strong> - 快速处理和分析 Excel、CSV 等数据</li>
-                    <li><strong>任务自动化</strong> - 批量处理重复性工作</li>
-                    <li><strong>知识问答</strong> - 基于上下文智能解答问题</li>
+                    <li><strong>不要安装到 C 盘</strong>：安装过程中会提示选择安装路径，务必手动修改到其他盘（如 D 盘）。WorkBuddy 在工作过程中会下载模型文件、缓存数据，这些文件会持续增长，C 盘空间不足会导致运行异常。</li>
+                    <li>安装完成后，桌面会自动生成 WorkBuddy 快捷方式。</li>
                 </ol>
 
-                <h2>快速开始</h2>
+                <h4>macOS 安装</h4>
+                <p>下载 <code>.dmg</code> 文件后，拖拽到 Applications 文件夹即可，无特殊注意事项。</p>
 
-                <h3>第一步：界面认知</h3>
-                <p>打开 WorkBuddy 后，你会看到：</p>
+                <h3 id="section-2-2">初始化登录与配置</h3>
+                <p>安装完成后首次启动，需要进行以下几步初始配置：</p>
+
+                <p><strong>第一步：微信扫码登录</strong></p>
+                <p>WorkBuddy 使用微信扫码登录，无需额外注册账号。打开软件后，点击"微信登录"，用手机微信扫描屏幕上的二维码即可完成登录。一个微信账号即绑定一个 WorkBuddy 账号。</p>
+
+                <p><strong>第二步：微信小程序绑定（重要）</strong></p>
+                <p>登录后，建议立即绑定微信小程序。绑定后你可以通过手机上的「WorkBuddy 小程序」远程给电脑端的 WorkBuddy 发送指令——比如你在外面开会，可以用手机让 WorkBuddy 帮你生成一份报表，回到家时已经准备好了。</p>
+                <p>绑定方式：在 WorkBuddy 桌面端设置中找到「微信小程序」入口，用微信扫码即可完成关联。</p>
+
+                <p><strong>第三步：配置默认工作空间</strong></p>
+                <p>WorkBuddy 需要指定一个<strong>默认工作空间</strong>（即它读写的根目录），建议配置为你日常工作的文件夹，例如 <code>D:\Work\</code>。这样你让 AI 处理文件时，默认就在这个目录下操作，省去每次指定路径的麻烦。</p>
+
+                <blockquote>
+                    <strong>提示</strong>：工作空间不要选在 C 盘，原因同上——避免空间不足影响使用。
+                </blockquote>
+
+                <!-- ===== 三、实际能干什么 ===== -->
+                <h2 id="section-3">三、实际能干什么</h2>
+                <p>以下从零基础用户的视角，用四个最常见的场景展示 WorkBuddy 的实际用法。每个场景都包含"怎么做"和"得到什么效果"。</p>
+
+                <h3 id="section-3-1">3.1 日常问答：不懂就问，当你的随身百科</h3>
+                <p>WorkBuddy 本质是一个对话工具，你像跟同事聊天一样对它说话就行。不需要任何技术术语，也不用学什么"提示词技巧"——用大白话描述你的问题，它就能给出答案。</p>
+
+                <p><strong>举个例子</strong>：</p>
+                <div class="scene-quote">你在整理资料时，手头有一份 PDF 需要转成 Word 编辑，但不知道怎么操作。</div>
+
+                <p><strong>操作</strong>：在输入框里直接打一句话——</p>
+                <div class="scene-quote">"我有一份 PDF 文件，想转成 Word 格式方便编辑，该怎么做？"</div>
+
+                <p><strong>效果</strong>：WorkBuddy 会先告诉你几种转换方法（比如用 WPS、在线工具、或者直接让它帮你转），然后你可以直接把 PDF 文件拖进去，说"那你帮我转一下"。几秒钟后，Word 文件就生成好了。</p>
+
+                <hr class="section-divider">
+
+                <h3 id="section-3-2">3.2 文档处理：让它帮你写、帮你改、帮你整理</h3>
+                <p>日常工作中最耗时的往往不是"做事"，而是"写东西"——周报、会议纪要、汇报材料、通知公告。这些都可以交给 WorkBuddy。</p>
+
+                <p><strong>举个例子</strong>：</p>
+                <div class="scene-quote">开完一个小时的部门会议，录音转文字软件给你生成了 5000 字的原始文稿，你需要在 30 分钟内整理出一份发给领导的会议纪要。</div>
+
+                <p><strong>操作</strong>：把原始文稿拖进 WorkBuddy，输入——</p>
+                <div class="scene-quote">"这是今天部门例会的录音转写稿，请帮我整理成标准会议纪要，包含：会议主题、参会人员、讨论要点、决议事项、待办任务及责任人。格式要正式，适合发给领导。"</div>
+
+                <p><strong>效果</strong>：WorkBuddy 会自动梳理出结构化的纪要——去掉口水话、提取关键信息、按逻辑分段、标注责任人。你只需要通读一遍，微调几个字，就可以直接发出去了。</p>
+
+                <hr class="section-divider">
+
+                <h3 id="section-3-3">3.3 代码编写：不懂代码也能处理数据</h3>
+                <p>这是最容易被误解的一项能力。很多人以为"代码编写"是程序员才用的功能，但实际上，你不需要懂代码，只需要说清楚"我想对这批文件做什么"，WorkBuddy 会自动编写并运行脚本。</p>
+
+                <p><strong>举个例子</strong>：</p>
+                <div class="scene-quote">你有一个文件夹，里面有 200 张活动照片，文件名都是 <code>IMG_0001.jpg</code>、<code>IMG_0002.jpg</code> 这种格式。你想把它们改成 <code>2025年春季书展_01.jpg</code>、<code>2025年春季书展_02.jpg</code> 这样的格式，但手动改太慢。</div>
+
+                <p><strong>操作</strong>：把文件夹路径告诉 WorkBuddy——</p>
+                <div class="scene-quote">"D 盘 '活动照片' 文件夹里有 200 张图片，请帮我把它们批量重命名为 '2025年春季书展_01.jpg' 到 '2025年春季书展_200.jpg' 的格式。"</div>
+
+                <p><strong>效果</strong>：WorkBuddy 会自动生成一段重命名脚本，在后台运行，几秒钟后 200 张照片全部改名完成。你全程不需要写一行代码，甚至不需要知道脚本长什么样。</p>
+
+                <hr class="section-divider">
+
+                <h3 id="section-3-4">3.4 任务自动化：重复的事情让它定时做</h3>
+                <p>如果你的工作中有固定的周期性任务——比如每周五生成销售周报、每天整理邮箱附件、每月初汇总考勤数据——这些都可以配置为自动化任务，WorkBuddy 按预设时间自动执行。</p>
+
+                <p><strong>举个例子</strong>：</p>
+                <div class="scene-quote">你每天需要从一张 Excel 销售明细表中提取当日数据，计算各门店销售额，生成一份日报发到工作群。</div>
+
+                <p><strong>操作</strong>：跟 WorkBuddy 说清楚需求——</p>
+                <div class="scene-quote">"我每天需要根据 D 盘 '销售数据.xlsx' 里的当日销售记录，按门店汇总销售额，生成一份日报。请帮我配置为每天下午 5 点自动执行。"</div>
+
+                <p><strong>效果</strong>：首次配置完成后，WorkBuddy 会每天下午 5 点自动读取 Excel 数据、汇总计算、生成日报文件。你到点打开文件就能用，再也不用每天手动拉数据、做透视表。如果哪天数据有变动，日报也会自动反映最新结果。</p>
+
+                <!-- ===== 四、是否收费 ===== -->
+                <h2 id="section-4">四、是否收费</h2>
+                <p>WorkBuddy 采用<strong>"免费体验 + 付费订阅"</strong>的计费模式，具体如下：</p>
+
+                <h3 id="section-4-1">4.1 个人版（2026 年 7 月 1 日起生效）</h3>
+                <table>
+                    <thead>
+                        <tr><th>版本</th><th>月付价格</th><th>连续包月（7 折）</th><th>每月积分</th><th>核心权益</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>体验版</td><td>免费</td><td>—</td><td>500 Credits</td><td>基础功能，有对话频率限制</td></tr>
+                        <tr><td>标准版</td><td>99 元</td><td>70 元/月</td><td>4,000 Credits</td><td>无限次代码补全、全模型可用、15 个自动任务/月</td></tr>
+                        <tr><td>高级版</td><td>199 元</td><td>140 元/月</td><td>9,000 Credits</td><td>30 个自动任务/月</td></tr>
+                        <tr><td>旗舰版</td><td>999 元</td><td>700 元/月</td><td>50,000 Credits</td><td>99 个自动任务/月</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 id="section-4-2">4.2 新用户福利与积分获取</h3>
+
+                <h4>每日签到（必做）</h4>
+                <p>WorkBuddy 提供每日签到领积分功能，是获取免费积分最稳定的渠道。</p>
+
+                <p><strong>签到位置</strong>：打开 WorkBuddy 客户端 → 点击左下角<strong>头像</strong> → 在弹出菜单中点击「<strong>领取今日礼包</strong>」即可完成签到。</p>
+
+                <blockquote>
+                    也可以在首页直接点击签到按钮（通常在左下角头像区域有醒目的签到入口）。
+                </blockquote>
+
+                <p><strong>签到规则</strong>：</p>
+                <table>
+                    <thead>
+                        <tr><th>签到天数</th><th>奖励积分</th><th>说明</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>每天签到</td><td>150 Credits/天</td><td>每天签到即可领取，积分固定</td></tr>
+                        <tr><td>每月累计</td><td>约 4,500 Credits/月</td><td>纯签到月入 4,500+，日常完全够用</td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>查看积分余额</strong>：左下角头像 → 「积分余额」→「用量管理」，可以查看当前积分余额、消耗明细和历史记录。</p>
+
+                <h4>其他免费积分渠道</h4>
+                <table>
+                    <thead>
+                        <tr><th>渠道</th><th>积分</th><th>操作方式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>首次注册</td><td>2,000 Credits</td><td>注册即送，一次性发放</td></tr>
+                        <tr><td>每日签到</td><td>150 Credits/天</td><td>左下角头像 → 领取今日礼包</td></tr>
+                        <tr><td>体验专家团</td><td>500 Credits</td><td>进入「成长计划」→ 完成「体验专家团」任务</td></tr>
+                        <tr><td>邀请好友</td><td>500 Credits/人</td><td>邀请同事注册，双方各得 500</td></tr>
+                        <tr><td>社区发帖</td><td>500-1,000 Credits/篇</td><td>在官方社区分享使用心得或教程</td></tr>
+                        <tr><td>节日福利</td><td>不定</td><td>节假日关注官方公告，限时积分礼包</td></tr>
+                    </tbody>
+                </table>
+
+                <blockquote>
+                    <strong>提示</strong>：积分有效期约 30 天，签到要及时，过期清零。WorkBuddy 与 CodeBuddy（AI 编程工具）<strong>共享积分</strong>，无需重复付费。
+                </blockquote>
+
+                <h3 id="section-4-3">4.3 不同模型，不同消耗</h3>
+                <p>WorkBuddy 在执行任务时可以选择不同的 AI 模型，不同模型的计费方式不同——<strong>能力越强的模型，消耗的积分越多</strong>。合理选择模型是省钱的关键。</p>
+
+                <table>
+                    <thead>
+                        <tr><th>模型类型</th><th>消耗积分</th><th>适用场景</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>轻量模型（如 Lite）</td><td>低</td><td>日常问答、简单总结、格式转换</td></tr>
+                        <tr><td>标准模型（如 Default）</td><td>中</td><td>文档撰写、数据分析、代码生成</td></tr>
+                        <tr><td>深度推理模型（如 Reasoning）</td><td>高</td><td>复杂逻辑推理、长文档深度分析、多步骤规划</td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>省积分技巧</strong>：</p>
+                <ul>
+                    <li>问一个简单问题（如"PDF 怎么转 Word"）时，切换到轻量模型，消耗极少；</li>
+                    <li>需要写一份正式报告时，再用标准模型；</li>
+                    <li>只有遇到真正的复杂任务（比如分析几十页合同条款），才需要动用深度推理模型。</li>
+                </ul>
+                <p>切换方式：在输入框上方或设置中，找到模型选择器，点击即可切换。<strong>积分不够用时，优先考虑换模型，而不是直接充值。</strong></p>
+
+                <h3 id="section-4-4">4.4 如何获取更多免费积分</h3>
+                <p>除了每日登录的 150 Credits，还可以通过以下方式获取额外积分：</p>
+                <ul>
+                    <li><strong>官方活动</strong>：WorkBuddy 不定期推出积分活动，关注软件内的活动公告或官方公众号，参与即可获得加赠积分；</li>
+                    <li><strong>邀请好友</strong>：邀请同事注册 WorkBuddy，双方均可获得积分奖励；</li>
+                    <li><strong>社区贡献</strong>：在官方社区分享使用技巧、提交反馈，优质内容有机会获得积分奖励；</li>
+                    <li><strong>节日福利</strong>：节假日期间官方通常会发放限时积分礼包，留意通知即可。</li>
+                </ul>
+
+                <h3 id="section-4-5">4.5 接入外部大模型（Token Plan）</h3>
+                <p>如果你有自己购买的其他大模型 API 额度——比如 <strong>DeepSeek、通义千问（Qwen）、方舟（Ark）</strong> 等——可以直接配置到 WorkBuddy 中使用，不再消耗 WorkBuddy 内部积分。</p>
+
+                <p><strong>配置步骤</strong>：</p>
+                <ol>
+                    <li>在对应平台（如 DeepSeek 开放平台、阿里云百炼、火山方舟）购买 API 额度，获取 <strong>API Key</strong>；</li>
+                    <li>打开 WorkBuddy，进入「设置」→「模型服务」→「添加自定义模型」；</li>
+                    <li>选择模型提供商（如 DeepSeek / 千问 / 方舟），填入 API Key 和接口地址；</li>
+                    <li>保存后，在模型选择器中即可切换到你配置的外部模型。</li>
+                </ol>
+
+                <p>这样配置后，使用外部模型的任务消耗的是你自己购买的 API 额度，不占用 WorkBuddy 积分。对于重度用户来说，自行购买 API 额度往往比直接订阅高级版更划算——比如 DeepSeek 的 API 价格极低，几块钱就能处理大量文档。</p>
+
+                <h3 id="section-4-6">4.6 建议</h3>
+                <ul>
+                    <li><strong>轻度用户</strong>：体验版足够，首月免费积分可达 6,500 Credits（2,000 注册 + 150×30 每日），可支撑日常办公需求</li>
+                    <li><strong>日常办公用户</strong>：标准版（连续包月 70 元/月）性价比最高，解除限制后基本够用</li>
+                    <li><strong>重度用户</strong>：可考虑接入外部模型（如 DeepSeek API），成本远低于订阅旗舰版</li>
+                    <li><strong>积分不够时</strong>：优先切换轻量模型 → 参与活动获取免费积分 → 最后才考虑充值</li>
+                </ul>
+
+                <!-- ===== 五、快速上手 ===== -->
+                <h2 id="section-5">五、快速上手</h2>
+
+                <h3 id="section-5-1">第一步：界面认知</h3>
+                <p>打开 WorkBuddy 后，你会看到四个主要区域：</p>
+
+                <img src="../assets/images/workbuddy_main_ui.png" alt="WorkBuddy 主界面截图" style="max-width:100%;border-radius:8px;margin:20px 0;border:1px solid #e2e8f0;">
+
                 <ul>
                     <li><strong>输入框</strong>：在底部，用于输入你的需求或问题</li>
                     <li><strong>对话区</strong>：中间区域，显示你与 AI 的交互记录</li>
-                    <li><strong>工具栏</strong>：顶部或侧边，提供文件上传、设置等功能</li>
+                    <li><strong>左侧边栏</strong>：提供专家、技能、连接器等扩展功能入口</li>
+                    <li><strong>右侧边栏</strong>：<strong>文件产物区</strong>——这是 WorkBuddy 与普通对话型 AI 最大的区别</li>
                 </ul>
 
-                <h3>第二步：基础操作</h3>
-                <p><strong>发送消息：</strong></p>
+                <h4>右侧边栏：直接找到 AI 生成的产物</h4>
+                <p>普通 AI 对话工具，你问一句它答一句，生成的代码、文档、表格都嵌在对话里，你需要手动复制出来保存。而 WorkBuddy 不一样——它<strong>直接在本地文件系统里干活</strong>，所有生成的文件（Word、Excel、PPT、代码、图片等）都会出现在右侧边栏的「文件」列表中。</p>
+
+                <p><strong>这意味着什么</strong>：</p>
                 <ul>
-                    <li>直接在输入框输入文字，按 Enter 发送</li>
-                    <li>支持拖拽上传文件（文档、表格、图片等）</li>
+                    <li>AI 帮你写了一份报告 → 右侧边栏直接出现一个 <code>.docx</code> 文件，点击就能打开，已经在你的电脑里了；</li>
+                    <li>AI 帮你分析完数据 → 生成的 Excel 图表文件就在右侧边栏，双击用 Excel 打开即可；</li>
+                    <li>AI 帮你写了一个脚本 → 右侧边栏出现 <code>.py</code> 或 <code>.js</code> 文件，直接运行或分享。</li>
                 </ul>
+                <p>你不需要"复制粘贴"、"另存为"、"导出下载"——AI 干完活，产物就在你电脑上，跟你自己手动创建的文件没有任何区别。这是 WorkBuddy 作为<strong>桌面智能体</strong>与网页版聊天 AI 最本质的不同。</p>
 
-                <p><strong>使用工具：</strong></p>
+                <h4>输入框详解：模型选择</h4>
+                <p>输入框左侧有一个<strong>模型选择器</strong>，点击下拉可以看到 WorkBuddy 内置的所有模型。</p>
+
+                <img src="../assets/images/workbuddy_model_selector.png" alt="模型选择器截图" style="max-width:100%;border-radius:8px;margin:20px 0;border:1px solid #e2e8f0;">
+
+                <p>每个模型名称旁边会显示以下关键信息：</p>
+
+                <table>
+                    <thead>
+                        <tr><th>看什么</th><th>在哪看</th><th>含义</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>积分消耗</strong></td><td>模型名后面的数字（如 <code>0.16x</code>）</td><td>倍率越高，处理同样任务消耗的积分越多</td></tr>
+                        <tr><td><strong>能力提示</strong></td><td>鼠标悬停模型名时弹出的简介</td><td>告诉你这个模型擅长什么</td></tr>
+                        <tr><td><strong>是否支持图片</strong></td><td>模型名旁是否有相机图标</td><td>有图标 = 可以上传图片让它分析</td></tr>
+                        <tr><td><strong>是否支持推理</strong></td><td>模型名旁是否有大脑图标</td><td>有图标 = 支持深度思考模式</td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>内置模型速览</strong>：</p>
+                <table>
+                    <thead>
+                        <tr><th>模型</th><th>推荐场景</th><th>支持图片</th><th>特点</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Auto（自动）</strong></td><td>懒得选的时候用</td><td>是</td><td>系统自动判断任务难度，帮你选最合适的模型</td></tr>
+                        <tr><td><strong>DeepSeek-V4</strong></td><td>日常问答、代码、数据分析</td><td>是</td><td>综合能力强，性价比高</td></tr>
+                        <tr><td><strong>Kimi-K2.6</strong></td><td>长文档、多文档综合分析、图片理解</td><td>是</td><td>超长上下文（200 万 Token），一次能读整本书</td></tr>
+                        <tr><td><strong>GLM-5.2</strong></td><td>中文写作、知识问答</td><td>是</td><td>中文语义理解突出</td></tr>
+                        <tr><td><strong>GLM-5v-Turbo</strong></td><td>图片分析、图表解读</td><td>是</td><td>原生多模态，看图能力最强</td></tr>
+                        <tr><td><strong>Hy3 preview</strong></td><td>复杂推理、深度分析</td><td>是</td><td>混元思考模型，推理能力增强</td></tr>
+                        <tr><td><strong>MiniMax-M2.5</strong></td><td>创意写作、内容生成</td><td>是</td><td>文本风格多样，适合营销文案</td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>场景化推荐</strong>：</p>
                 <ul>
-                    <li>当需要执行特定操作时，AI 会自动调用相应工具</li>
-                    <li>你也可以明确请求："请帮我读取这个文件"</li>
+                    <li><strong>日常问答、简单任务</strong>（如"PDF 怎么转 Word"）→ 选 <strong>DeepSeek-V4</strong>，消耗低、响应快；</li>
+                    <li><strong>带图片的任务</strong>（如"分析这张数据图表"）→ 选 <strong>Kimi-K2.6</strong> 或 <strong>GLM-5v-Turbo</strong>，原生多模态，看图理解最准；</li>
+                    <li><strong>长文档处理</strong>（如"读完这份 50 页合同并总结要点"）→ 选 <strong>Kimi-K2.6</strong>，200 万 Token 上下文，一次塞一整本书没问题；</li>
+                    <li><strong>复杂分析、深度推理</strong>（如"帮我分析这三份财报的关联性"）→ 选 <strong>Hy3 preview</strong> 或 <strong>DeepSeek-V4</strong>，推理能力强；</li>
+                    <li><strong>拿不准选什么</strong> → 直接用 <strong>Auto</strong>，让系统帮你决定。</li>
                 </ul>
 
-                <p><strong>查看结果：</strong></p>
+                <blockquote>
+                    新手建议：平时用 Auto 模式，等熟悉各模型特点后再根据任务类型手动切换，既省心又省积分。
+                </blockquote>
+
+                <h4>输入框详解：工作模式（Craft / Plan / Ask）</h4>
+                <p>输入框上方有三个模式切换按钮，决定了 WorkBuddy 的"干活方式"：</p>
+
+                <img src="../assets/images/workbuddy_work_mode.png" alt="工作模式切换截图" style="max-width:100%;border-radius:8px;margin:20px 0;border:1px solid #e2e8f0;">
+
+                <table>
+                    <thead>
+                        <tr><th>模式</th><th>中文含义</th><th>适用场景</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Craft</strong></td><td>你说，我做</td><td>日常使用最频繁的模式。你提需求，AI 直接动手执行，不废话</td></tr>
+                        <tr><td><strong>Plan</strong></td><td>先计划，后执行</td><td>复杂任务先用 Plan 模式让 AI 出方案，你确认后再执行</td></tr>
+                        <tr><td><strong>Ask</strong></td><td>只聊，不动手</td><td>纯咨询场景，AI 只回答问题，不会修改任何文件</td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>怎么选</strong>：</p>
                 <ul>
-                    <li>AI 会在对话区展示处理结果</li>
-                    <li>生成的文件通常会提供下载链接</li>
+                    <li>明确知道自己要什么（比如"帮我把这份 PDF 转成 Word"）→ <strong>Craft</strong>，直接干活；</li>
+                    <li>任务比较复杂、怕 AI 跑偏（比如"帮我设计一个数据看板"）→ <strong>Plan</strong>，先看方案再动手；</li>
+                    <li>只是问个问题、了解一下功能（比如"这个功能怎么用"）→ <strong>Ask</strong>，安全省积分。</li>
                 </ul>
 
-                <h3>第三步：进阶技巧</h3>
-                <ol>
-                    <li><strong>上下文保持</strong>：WorkBuddy 会记住当前对话的上下文，你可以连续提问</li>
-                    <li><strong>多轮对话</strong>：如果结果不满意，可以直接要求修改或调整</li>
-                    <li><strong>文件引用</strong>：在对话中引用之前处理的文件，无需重复上传</li>
-                </ol>
+                <blockquote>
+                    新手建议：日常用 Craft，不确定时切到 Plan 让 AI 先说说打算怎么做，满意了再切回 Craft 执行。
+                </blockquote>
 
-                <h2>实用示例</h2>
+                <h4>输入框详解：工作空间选择</h4>
+                <p>每次启动新任务时，WorkBuddy 会提示你选择<strong>工作空间</strong>——也就是 AI 读写文件的根目录。你之前在初始化配置中设置过默认工作空间，但具体到每个任务，可以灵活调整。</p>
+
+                <p><strong>工作空间的影响</strong>：</p>
+                <ul>
+                    <li>AI 默认在这个目录下查找和生成文件，比如你让它"读取销售数据"，它会优先在工作空间里找；</li>
+                    <li>如果选错了工作空间，AI 可能找不到你要的文件，导致任务失败；</li>
+                    <li>反过来，如果你想限制 AI 的访问范围，可以把工作空间设为一个子文件夹，这样 AI 不会看到其他目录的文件。</li>
+                </ul>
+
+                <p><strong>建议</strong>：每次开始新任务前，花 2 秒确认一下工作空间是否正确。大多数时候用默认工作空间即可，处理特定项目时再切换。</p>
+
+                <h3 id="section-5-2">第二步：进阶技巧</h3>
+
+                <h4>召唤专家团（Experts）</h4>
+                <p>WorkBuddy 内置了 100+ 位<strong>领域专家</strong>，每位专家针对特定场景调优过——比如有专门写 PPT 的专家、有擅长数据分析的专家、有精通法律文书的专家。你可以随时召唤专家来帮你处理专业任务。</p>
+                <p><strong>怎么用</strong>：在左侧侧边栏点击「专家」，浏览或搜索你需要的专家，点击即可召唤到当前对话中。专家会以该领域的专业视角辅助你完成任务。</p>
+                <p><strong>举个例子</strong>：你要做一份年终汇报 PPT，与其自己从零开始写提示词，不如直接召唤「PPT 制作」专家，把素材和需求丢给它，它生成的 PPT 质量远高于通用模型。</p>
+
+                <h4>技能选择（Skill）</h4>
+                <p>技能（Skill）是 WorkBuddy 的"能力插件"——你可以理解为给 AI 安装各种专业工具包。WorkBuddy 支持三种来源的技能：</p>
+
+                <table>
+                    <thead>
+                        <tr><th>来源</th><th>说明</th><th>适用场景</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>内置技能</strong></td><td>WorkBuddy 自带的基础技能，如文件处理、代码生成等</td><td>开箱即用，无需配置</td></tr>
+                        <tr><td><strong>外部技能</strong></td><td>从官方技能市场下载安装，覆盖金融、法律、设计等垂直领域</td><td>需要特定专业能力时安装</td></tr>
+                        <tr><td><strong>自建技能</strong></td><td>你自己编写 SKILL.md 文件定制的专属技能</td><td>沉淀团队经验、封装常用操作流程</td></tr>
+                    </tbody>
+                </table>
+
+                <p><strong>外部技能示例</strong>：安装「金融数据查询」技能后，WorkBuddy 可以直接查询股票行情、基金净值、财报数据，无需手动搜索。</p>
+                <p><strong>自建技能示例</strong>：你们团队每月有固定的周报格式和模板，你可以写一个「周报生成」技能，定义好格式要求和数据来源，以后每次只需说"生成本周周报"，AI 就按你预设的模板自动完成。</p>
+
+                <h4>连接常用连接器（Connectors）</h4>
+                <p>连接器让 WorkBuddy 能够直接与外部服务打通——不是简单的"打开网页"，而是真正的数据互通，AI 可以直接在你的工具里读写数据。以下是三个最常用的连接器：</p>
+
+                <p><strong>1. 腾讯会议</strong></p>
+                <p>连接后，WorkBuddy 可以读取你的会议录制列表，直接导入会议转写文本，并自动生成会议纪要。</p>
+                <p><strong>场景举例</strong>：你昨天开了 3 个会，今天需要整理会议纪要。在 WorkBuddy 里说"帮我导入昨天的产品评审会录制，生成会议纪要"，AI 会自动拉取录制、提取转写文本、整理成结构化纪要，省去手动听录音的 2 小时。</p>
+
+                <p><strong>2. 腾讯文档</strong></p>
+                <p>连接后，WorkBuddy 可以直接在腾讯文档中创建、编辑、搜索文档，无需手动复制粘贴。</p>
+                <p><strong>场景举例</strong>：你让 WorkBuddy 帮你写了一份项目方案，完成后说"把这份方案保存到腾讯文档，放到'2025 年项目'文件夹里"，文档就自动创建好了，你打开腾讯文档就能看到。</p>
+
+                <p><strong>3. QQ 邮箱</strong></p>
+                <p>连接后，WorkBuddy 可以读取你的邮件、帮你整理邮件摘要、甚至代你发送邮件。</p>
+                <p><strong>场景举例</strong>：周一早上你打开 WorkBuddy，说"帮我整理一下周末收到的未读邮件，按重要性排序，重要的帮我标出来"，AI 会读取你的收件箱，生成一份邮件摘要，让你 5 分钟处理完原本需要 30 分钟的工作。</p>
+
+                <blockquote>
+                    <strong>连接器配置方式</strong>：在左侧侧边栏点击「连接器」，选择对应的服务，按提示完成授权即可。每个连接器只需配置一次，之后永久生效。
+                </blockquote>
+
+                <!-- ===== 六、实用示例 ===== -->
+                <h2 id="section-6">六、实用示例</h2>
 
                 <h3>示例 1：快速生成会议纪要</h3>
                 <pre><code>用户：请将这份录音转文字稿整理成标准会议纪要格式
@@ -107,37 +534,17 @@ AI：好的，我来帮您整理...
 
 AI：已为您生成重命名脚本，请查看...</code></pre>
 
-                <h3>示例 3：数据清洗与分析</h3>
-                <pre><code>用户：请分析这份销售数据，找出趋势和异常
-[上传 Excel 文件]
+                <!-- ===== 七、常见问题 ===== -->
+                <h2 id="section-7">七、常见问题</h2>
 
-AI：正在分析数据...
-[生成数据图表和分析报告]</code></pre>
-
-                <h2>最佳实践</h2>
-                <ol>
-                    <li><strong>描述要清晰</strong>：尽量详细描述你的需求，包括格式要求、输出样式等</li>
-                    <li><strong>分步执行</strong>：复杂任务建议拆分成多个步骤，逐一完成</li>
-                    <li><strong>及时反馈</strong>：如果结果不符合预期，及时告诉 AI 哪里需要调整</li>
-                    <li><strong>保存模板</strong>：对于常用的指令，可以保存为模板以便复用</li>
-                </ol>
-
-                <h2>常见问题</h2>
                 <p><strong>Q: 上传的文件大小有限制吗？</strong><br>
-                A: 一般来说，单个文件建议不超过 50MB，具体取决于当前使用的模型和配置。</p>
+                A: 一般情况下，单个文件建议不超过 50MB，具体取决于当前使用的模型和配置。</p>
 
                 <p><strong>Q: AI 生成的内容可以直接使用吗？</strong><br>
                 A: 建议先审核再使用，特别是涉及重要决策或对外发布的场景。</p>
 
                 <p><strong>Q: 如何保护数据隐私？</strong><br>
                 A: 避免上传包含敏感个人信息（如身份证号、银行卡号）的文件，企业数据请遵循公司安全规范。</p>
-
-                <h2>下一步</h2>
-                <p>掌握了基础操作后，你可以继续学习：</p>
-                <ul>
-                    <li><a href="chapter_02_document.html">文档智能处理：让 AI 帮你写报告</a></li>
-                    <li><a href="chapter_03_data.html">数据分析实战：Excel 与图表自动化</a></li>
-                </ul>
 
                 <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
                 <p style="color: var(--text-muted); font-size: 0.9rem; text-align: center;">

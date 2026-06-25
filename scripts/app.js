@@ -20,14 +20,14 @@ const chapters = [
     },
     {
         id: 'chapter_01',
-        title: '快速上手：WorkBuddy 基础操作指南',
+        title: 'WorkBuddy 介绍：免费带你入门AI工具，你的第一个高智商高学历数字手下',
         category: '办公技巧',
         icon: 'fas fa-rocket',
         iconClass: 'icon-tips',
         categoryClass: 'category-tips',
-        desc: '从零开始了解 WorkBuddy 的核心功能和界面布局，掌握基本的文件操作、工具调用和任务管理技巧，为高效办公打下基础。',
-        author: '团队知识库',
-        date: '2025-06-24',
+        desc: '从下载安装、账号配置、核心功能、计费模式、模型选择到进阶技巧，零基础全面了解 WorkBuddy 桌面智能体。',
+        author: '韩午',
+        date: '2026-06-25',
         path: 'chapters/chapter_01_quickstart.html'
     },
     {
@@ -38,23 +38,11 @@ const chapters = [
         iconClass: 'icon-docs',
         categoryClass: 'category-docs',
         desc: '掌握利用 WorkBuddy 智能处理文档的核心技巧，从报告撰写到格式转换，让 AI 成为你最得力的文档助手。',
-        author: '团队知识库',
-        date: '2025-06-24',
+        author: '韩午',
+        date: '2026-06-25',
         path: 'chapters/chapter_02_document.html'
     },
-    {
-        id: 'chapter_03',
-        title: '数据分析实战：Excel 与图表自动化',
-        category: '数据分析',
-        icon: 'fas fa-chart-bar',
-        iconClass: 'icon-data',
-        categoryClass: 'category-data',
-        desc: '利用 WorkBuddy 自动化处理 Excel 数据、生成专业图表，并从中提取有价值的业务洞察。',
-        author: '团队知识库',
-        date: '2025-06-24',
-        path: 'chapters/chapter_03_data.html'
-    }
-];
+    ];
 
 // ===== 渲染章节卡片 =====
 function renderChapters(filter = 'all') {
