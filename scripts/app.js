@@ -42,16 +42,31 @@ const chapters = [
         date: '2026-06-25',
         path: 'chapters/chapter_02_document.html'
     },
-    ];
+    {
+        id: 'chapter_03',
+        title: '数据分析实战：Excel 与图表自动化',
+        category: '数据分析',
+        icon: 'fas fa-chart-bar',
+        iconClass: 'icon-data',
+        categoryClass: 'category-data',
+        desc: '利用 WorkBuddy 自动化处理 Excel 数据、生成专业图表，从数据清洗到业务洞察，让数据分析不再繁琐。',
+        author: '韩午',
+        date: '2026-06-25',
+        path: 'chapters/chapter_03_data.html'
+    }
+];
 
-// ===== 渲染章节卡片 =====
+// ===== 渲染章节卡片（倒序排列，最新在前） =====
 function renderChapters(filter = 'all') {
     const grid = document.getElementById('chapters-grid');
     if (!grid) return;
 
+    // 按日期倒序排列（最新在前）
+    const sorted = [...chapters].sort((a, b) => b.date.localeCompare(a.date));
+
     const filtered = filter === 'all'
-        ? chapters
-        : chapters.filter(c => c.category === filter);
+        ? sorted
+        : sorted.filter(c => c.category === filter);
 
     grid.innerHTML = filtered.map(chapter => `
         <article class="chapter-card" data-category="${chapter.category}" onclick="location.href='${chapter.path}'">
@@ -88,19 +103,28 @@ function updateStats() {
     }
 }
 
-// ===== 筛选功能 =====
+// ===== 动态生成筛选按钮（自动从章节数据提取分类） =====
 function initFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const container = document.querySelector('.filter-options');
+    if (!container) return;
 
-    filterBtns.forEach(btn => {
+    // 从章节数据提取所有不重复的分类
+    const categories = [...new Set(chapters.map(c => c.category))];
+
+    // 构建筛选按钮 HTML（"全部" + 各分类）
+    container.innerHTML = `
+        <button class="filter-btn active" data-filter="all">全部</button>
+        ${categories.map(cat => `
+            <button class="filter-btn" data-filter="${cat}">${cat}</button>
+        `).join('')}
+    `;
+
+    // 绑定点击事件
+    container.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            // 更新按钮状态
-            filterBtns.forEach(b => b.classList.remove('active'));
+            container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // 渲染对应分类
-            const filter = btn.dataset.filter;
-            renderChapters(filter);
+            renderChapters(btn.dataset.filter);
         });
     });
 }
