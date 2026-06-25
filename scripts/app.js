@@ -32,7 +32,7 @@ const chapters = [
     },
     {
         id: 'chapter_02',
-        title: '文档智能处理：让 AI 帮你写报告',
+        title: '文档智能处理：你出创意，让 AI 帮你写报告，你做审核',
         category: '文档处理',
         icon: 'fas fa-file-alt',
         iconClass: 'icon-docs',
@@ -42,18 +42,6 @@ const chapters = [
         date: '2026-06-25',
         path: 'chapters/chapter_02_document.html'
     },
-    {
-        id: 'chapter_03',
-        title: '数据分析实战：Excel 与图表自动化',
-        category: '数据分析',
-        icon: 'fas fa-chart-bar',
-        iconClass: 'icon-data',
-        categoryClass: 'category-data',
-        desc: '利用 WorkBuddy 自动化处理 Excel 数据、生成专业图表，从数据清洗到业务洞察，让数据分析不再繁琐。',
-        author: '韩午',
-        date: '2026-06-25',
-        path: 'chapters/chapter_03_data.html'
-    }
 ];
 
 // ===== 渲染章节卡片（倒序排列，最新在前） =====
